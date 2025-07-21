@@ -21,9 +21,13 @@ Bot per Discord sviluppato con Python.
 
 1. Crea un file `.env` con i tuoi seguenti token:
 DISCORD_TOKEN=il-tuo-token-discord;
-WEATHER_TOKEN=il-tuo-weather-api-token-qui (OpenWeather API)
+WEATHER_TOKEN=il-tuo-weather-api-token-qui (OpenWeather API);
+DB_HOST=host-database;
+DB_USER=utente-database;
+DB_PASS=password-database;
+DB_NAME=nome-database.
 
-2. Installa le dipendenze richieste:
+3. Installa le dipendenze richieste:
 
 pip install -r requirements.txt
 

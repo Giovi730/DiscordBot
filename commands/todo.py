@@ -1,5 +1,18 @@
 from discord.ext import commands 
 import pymysql
+import os
+from dotenv import load_dotenv 
+
+
+load_dotenv()
+
+
+
+host = os.getenv("DB_HOST")
+user = os.getenv("DB_USER")
+passwd = os.getenv("DB_PASS")
+database = os.getenv("DB_NAME")
+
 
 def AccessToDB():
     """
@@ -8,10 +21,10 @@ def AccessToDB():
     """
     try: 
         conn = pymysql.connect(
-            host="mysql-giovixx10.alwaysdata.net",
-            user="giovixx10",
-            passwd="Abcdefgh1",   
-            database="giovixx10_discorddatabase"
+            host=host,
+            user=user,
+            passwd=passwd,
+            database=database
         )
         print("Connessione al database 'discordDataBase' riuscita.")
         return conn
